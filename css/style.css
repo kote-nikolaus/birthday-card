@@ -1,0 +1,251 @@
+.first {
+  background-color: #292F36;
+}
+
+.second {
+  background: linear-gradient(-45deg, rgb(0, 8, 120), rgb(25, 6, 131), rgb(49, 5, 142), rgb(74, 3, 154), rgb(98, 2, 165), rgb(123, 0, 176), rgb(145, 6, 147), rgb(167, 11, 117), rgb(189, 17, 88), rgb(211, 23, 59), rgb(233, 28, 29), rgb(255, 34, 0));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.form {
+  display: none;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40vh;
+}
+
+.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  display: block;
+  margin-bottom: 10px;
+  border: 0;
+}
+
+.form-button {
+  background-color: rgb(123, 0, 176);
+  border: 0;
+  width: 204px;
+  height: 35px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form-button:hover {
+  background-color: rgb(255, 34, 0);
+}
+
+.balloons-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+  animation: movingup 10s linear 1;
+}
+
+.balloons {
+  fill: #ffffff;
+  width: 250px;
+  display: block;
+}
+
+@keyframes movingup {
+	0% {
+		margin-top: 100vh;
+	}
+	50% {
+	  margin-top: 20vh;
+	}
+	100% {
+	  margin-top: -400px;
+	}
+}
+
+.message {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 68px;
+  color: #ffffff;
+  margin-top: 50px;
+  margin-bottom: 0;
+  animation: emergence 2s ease 1;
+}
+
+@keyframes emergence {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+.bar {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background-color: #ffffff;
+  margin-top: 44vh;
+  height: 5px;
+  animation: slidein 1s linear 1;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.bar-width {
+  animation: expand 1s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes expand {
+  from {
+    height: 5px;
+  }
+
+  to {
+    height: 190px;
+  }
+}
+
+.age {
+  position: absolute;
+  display:block;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  margin-top: 47vh;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, sans-serif;
+  font-size: 130px;
+  font-weight: 700;
+}
+
+.message-age {
+  background-image: linear-gradient(-45deg, rgb(0, 8, 120), rgb(25, 6, 131), rgb(49, 5, 142), rgb(74, 3, 154), rgb(98, 2, 165), rgb(123, 0, 176), rgb(145, 6, 147), rgb(167, 11, 117), rgb(189, 17, 88), rgb(211, 23, 59), rgb(233, 28, 29), rgb(255, 34, 0));
+  background-size: 400% 400%;
+  background-clip: text;
+  animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.gifts-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13vh;
+  z-index: 4;
+  flex-direction: row;
+  text-align: center;
+  width: 60%;
+  justify-content: space-between;
+  animation: emergence 2s ease 1;
+}
+
+.gift {
+  fill: rgb(0, 8, 120);
+}
+
+.cake {
+  display: none;
+  position: absolute;
+  width: 180px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+  fill: #ffffff;
+  animation: movingup2 3s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movingup2 {
+	0% {
+		margin-top: 100vh;
+	}
+	100% {
+	  margin-top: 75vh;
+	}
+}
+
+.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
